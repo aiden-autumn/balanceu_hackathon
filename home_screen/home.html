@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Screen</title>
+
+    <!-- ✅ Inter font (matches your UI style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Quote Section -->
+        <div class="quote-section">
+            <span class="quote-icon">✨</span>
+            <p class="quote-text" id="quoteText">Loading quote...</p>
+        </div>
+
+        <!-- Greeting Section -->
+        <div class="greeting-section">
+            <!-- ✅ This will now be filled from JS -->
+            <h1 class="greeting-title" id="greetingTitle">Loading...</h1>
+            <p class="greeting-subtitle">Ready to level up today?</p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-icon">📈</span>
+                    <span class="stat-label">Level</span>
+                </div>
+                <!-- ✅ Dynamic -->
+                <p class="stat-value" id="levelValue">0</p>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="xpProgress" style="width: 0%;"></div>
+                </div>
+                <p class="stat-subtext" id="xpText">0/100 XP</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-icon">🔥</span>
+                    <span class="stat-label">Streak</span>
+                </div>
+                <p class="stat-value" id="streakValue">0</p>
+                <p class="stat-subtext">days</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+                <p class="stat-value" id="completedValue">0</p>
+                <p class="stat-subtext">this week</p>
+            </div>
+
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+
+            <!-- Hobbies Section -->
+            <div class="hobbies-section">
+
+                <div class="hobbies-header">
+                    <h2 class="section-title">My Hobbies</h2>
+                    <button class="add-button" id="addHobbyBtn">
+                        <span>+</span> Add New
+                    </button>
+                </div>
+
+                <!-- ✅ JS will insert the 3 selected hobbies here -->
+                <div id="hobbiesList" class="hobbies-list"></div>
+
+                <!-- Add Hobby Form -->
+                <div id="addHobbyForm" class="add-hobby-form hidden">
+                    <input 
+                        type="text" 
+                        id="hobbyNameInput" 
+                        placeholder="Hobby name..." 
+                        class="hobby-input"
+                    >
+                    <input 
+                        type="number" 
+                        id="hobbyGoalInput" 
+                        placeholder="Goal (times per week)" 
+                        class="hobby-input" 
+                        value="10" 
+                        min="1"
+                    >
+                    <div class="form-buttons">
+                        <button class="submit-button" id="submitHobbyBtn">Add Hobby</button>
+                        <button class="cancel-button" id="cancelHobbyBtn">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Side Quest Section -->
+            <div class="quest-section">
+
+                <div class="quest-header">
+                    <span class="quest-icon">⚡</span>
+                    <h2 class="quest-title">Side Quest Available!</h2>
+                </div>
+
+                <div class="quest-content">
+                    <div class="quest-name-row">
+                        <h3 class="quest-name" id="questName">Loading...</h3>
+                        <span class="difficulty-badge" id="questDifficulty"></span>
+                    </div>
+
+                    <p class="quest-description" id="questDescription"></p>
+
+                    <div class="quest-reward">
+                        <span>🏆</span>
+                        <span id="questReward"></span>
+                    </div>
+                </div>
+
+                <button class="quest-button" id="startQuestBtn">
+                    Start Quest
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button class="nav-item active" onclick="goToPage('/home_screen/home.html')">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/log_screen/log.html')">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Log</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/quest_screen/quest.html')">
+            <div class="nav-icon">⚔️</div>
+            <div class="nav-label">Side Quest</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/grass_screen/grass.html')">
+            <div class="nav-icon">🌱</div>
+            <div class="nav-label">Touch Grass</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/progress_screen/progress.html')">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Progress</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/profile_screen/profile.html')">
+            <div class="nav-icon">🧑‍💻</div>
+            <div class="nav-label">Profile</div>
+        </button>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="home.js"></script>
+
+</body>
+</html>

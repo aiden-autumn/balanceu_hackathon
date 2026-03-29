@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touch Grass Screen</title>
+  <link rel="stylesheet" href="grass.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Feeling stuck?</h1>
+      <p>Press the button and go outside</p>
+    </div>
+
+    <!-- Main Content - Button and Stats -->
+    <div class="main-content">
+      <!-- The Big Button -->
+      <button id="touchButton" class="touch-button">
+        <!-- <svg class="sparkles-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+          <path d="M5 3v4"/>
+          <path d="M19 17v4"/>
+          <path d="M3 5h4"/>
+          <path d="M17 19h4"/>
+        </svg> -->
+        <span class="button-text">🌱</span>
+        <span class="button-text">TOUCH</span>
+        <span class="button-text">GRASS</span>
+      </button>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat-item">
+          <p class="stat-label">Touches Today</p>
+          <p class="stat-value" id="touchesToday">0</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-label">Total Touches</p>
+          <p class="stat-value total" id="totalTouches">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Awards Section -->
+    <div class="awards-section">
+      <h2>Awards</h2>
+      <div id="awardsContainer" class="awards-grid">
+        <div class="no-awards">
+          <p class="no-awards-title">No awards yet</p>
+          <p class="no-awards-subtitle">Touch grass to unlock awards!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button class="nav-item" onclick="goToPage('/home_screen/home.html')">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/log_screen/log.html')">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Log</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/quest_screen/quest.html')">
+            <div class="nav-icon">⚔️</div>
+            <div class="nav-label">Side Quest</div>
+        </button>
+
+        <button class="nav-item active" onclick="goToPage('/grass_screen/grass.html')">
+            <div class="nav-icon">🌱</div>
+            <div class="nav-label">Touch Grass</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/progress_screen/progress.html')">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Progress</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/profile_screen/profile.html')">
+            <div class="nav-icon">🧑‍💻</div>
+            <div class="nav-label">Profile</div>
+        </button>
+    </div>
+  
+  <script src="grass.js"></script>
+</body>
+</html>

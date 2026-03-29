@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Hobbies Screen</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Log Hobby Time</h1>
+        
+        <!-- Which hobby? -->
+        <div class="section">
+            <h2>Which hobby?</h2>
+            <div class="grid" id="hobbies">
+                <button data-hobby="drawing">
+                    <span class="emoji">🎨</span>Drawing
+                </button>
+                <button data-hobby="reading">
+                    <span class="emoji">📚</span>Reading
+                </button>
+                <button data-hobby="guitar">
+                    <span class="emoji">🎸</span>Guitar
+                </button>
+                <button data-hobby="running">
+                    <span class="emoji">🏃</span>Running
+                </button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- How long? -->
+        <div class="section">
+            <h2>How long?</h2>
+            <div class="grid" id="durations">
+                <button data-duration="10">10 min</button>
+                <button data-duration="20">20 min</button>
+                <button data-duration="30">30 min</button>
+                <button data-duration="60">1 hour</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- How did it feel? -->
+        <div class="section">
+            <h2>How did it feel? <span class="optional">(optional)</span></h2>
+            <div class="flex-wrap" id="feelings">
+                <button data-feeling="relaxed">
+                    <span class="emoji">🙂</span>Relaxed
+                </button>
+                <button data-feeling="creative">
+                    <span class="emoji">🎨</span>Creative
+                </button>
+                <button data-feeling="energized">
+                    <span class="emoji">⚡</span>Energized
+                </button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Log Session Button -->
+        <button class="log-button" onclick="logSession()">Log Session</button>
+    </div>
+
+
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button class="nav-item" onclick="goToPage('/home_screen/home.html')">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </button>
+
+        <button class="nav-item active" onclick="goToPage('/log_screen/log.html')">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Log</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/quest_screen/quest.html')">
+            <div class="nav-icon">⚔️</div>
+            <div class="nav-label">Side Quest</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/grass_screen/grass.html')">
+            <div class="nav-icon">🌱</div>
+            <div class="nav-label">Touch Grass</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/progress_screen/progress.html')">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Progress</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/profile_screen/profile.html')">
+            <div class="nav-icon">🧑‍💻</div>
+            <div class="nav-label">Profile</div>
+        </button>
+    </div>
+    
+
+    <script src="log.js"></script>
+</body>
+</html>
+
