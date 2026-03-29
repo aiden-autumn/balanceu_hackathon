@@ -63,7 +63,7 @@ No install or build step needed. Just open the files in a browser.
 |---|---|
 | HTML5 | Page structure and layout |
 | CSS3 | Styling and animations |
-| Vanilla JavaScript | All logic, state, and navigation |
+| JavaScript | All logic, state, and navigation |
 | localStorage | Persistent multi-user data storage |
 | Canvas API | Pie chart on the progress screen |
 
