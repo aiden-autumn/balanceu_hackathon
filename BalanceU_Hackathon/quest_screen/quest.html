@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Screen</title>
+    <link rel="stylesheet" href="quest.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>⚔️ Daily Side Quest</h1>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Main Quest Card -->
+        <div class="quest-card">
+            <div class="quest-content">
+                <div class="quest-emoji">⚔️</div>
+                
+                <div class="quest-info">
+                    <h2 class="quest-title">Creative Burst</h2>
+                    <p class="quest-description">Draw something in your room for 10 minutes.</p>
+                </div>
+                
+                <div class="quest-reward">
+                    <p class="reward-label">Reward:</p>
+                    <div class="reward-details">
+                        <p class="reward-xp">+15 XP</p>
+                        <p class="reward-badge">Creative Burst Badge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Quest Button -->
+        <button class="start-button" onclick="startQuest()">
+            Start Quest
+        </button>
+
+        <div class="separator-light"></div>
+
+        <!-- Upcoming Quests -->
+        <div class="upcoming-section">
+            <h2 class="upcoming-title">Upcoming Quests</h2>
+            
+            <div class="upcoming-list">
+                <div class="upcoming-quest" onclick="selectUpcomingQuest('Touch Grass Quest')">
+                    <div class="upcoming-emoji">🌱</div>
+                    <div class="upcoming-info">
+                        <h3 class="upcoming-quest-title">Touch Grass Quest</h3>
+                        <p class="upcoming-quest-description">Go outside for 10 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="upcoming-quest" onclick="selectUpcomingQuest('Music Quest')">
+                    <div class="upcoming-emoji">🎵</div>
+                    <div class="upcoming-info">
+                        <h3 class="upcoming-quest-title">Music Quest</h3>
+                        <p class="upcoming-quest-description">Listen to a new album</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header -->
+        <div>
+            <p id="sideQuestProgress">Side Quests Completed: 0</p>
+        </div>
+    </div>
+    
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button class="nav-item" onclick="goToPage('/home_screen/home.html')">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/log_screen/log.html')">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Log</div>
+        </button>
+
+        <button class="nav-item active" onclick="goToPage('/quest_screen/quest.html')">
+            <div class="nav-icon">⚔️</div>
+            <div class="nav-label">Side Quest</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/grass_screen/grass.html')">
+            <div class="nav-icon">🌱</div>
+            <div class="nav-label">Touch Grass</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/progress_screen/progress.html')">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Progress</div>
+        </button>
+        
+        <button class="nav-item" onclick="goToPage('/profile_screen/profile.html')">
+            <div class="nav-icon">🧑‍💻</div>
+            <div class="nav-label">Profile</div>
+        </button>
+    </div>
+    
+
+    <script src="quest.js"></script>
+</body>
+</html>
+

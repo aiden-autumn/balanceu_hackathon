@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BalanceU Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="profile-screen">
+    <!-- Header -->
+    <header class="profile-header">
+      <h1>BalanceU</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-main">
+      <div class="profile-card">
+        <!-- Welcome Message -->
+        <div class="welcome-section">
+          <h2>Welcome, <span id="user-name">John Doe</span>!</h2>
+        </div>
+
+        <!-- Username Field -->
+        <div class="field-group">
+          <label class="field-label">Username:</label>
+          <div id="username-value" class="field-value">johndoe123</div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="field-group">
+          <label class="field-label">Password:</label>
+          <div class="password-field">
+            <div id="password-value" class="password-value">•••••••••</div>
+            <button id="toggle-password" class="toggle-button" aria-label="Toggle password visibility">
+              <span id="eye-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hobbies Field -->
+        <div class="field-group">
+          <label class="field-label">Hobbies:</label>
+          <div id="profile-hobbies" class="field-value hobbies-list"></div>
+        </div>
+
+        <!-- Log Out Button -->
+        <div class="logout-section">
+          <button id="logout-button" class="logout-button">
+            Log Out
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button class="nav-item" onclick="goToPage('/home_screen/home.html')">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/log_screen/log.html')">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Log</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/quest_screen/quest.html')">
+            <div class="nav-icon">⚔️</div>
+            <div class="nav-label">Side Quest</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/grass_screen/grass.html')">
+            <div class="nav-icon">🌱</div>
+            <div class="nav-label">Touch Grass</div>
+        </button>
+
+        <button class="nav-item" onclick="goToPage('/progress_screen/progress.html')">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Progress</div>
+        </button>
+
+        <button class="nav-item active" onclick="goToPage('/profile_screen/profile.html')">
+            <div class="nav-icon">🧑‍💻</div>
+            <div class="nav-label">Profile</div>
+        </button>
+    </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
