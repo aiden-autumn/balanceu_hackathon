@@ -69,6 +69,17 @@ No install or build step needed. Just open the files in a browser.
 
 ---
 
+## 🧰 Tools I Used
+**| Tool | Purpose |
+|---|---|
+| [Visual Studio Code](https://code.visualstudio.com/) | Writing and organizing all code |
+| AI Chat Tools (e.g. ChatGPT) | Generating ideas, debugging code, and improving structure |
+| [Pinterest](https://www.pinterest.com/) | Design inspiration |
+| [Figma](https://www.figma.com/) | Planning layouts and UI design |
+| [Coolors](https://coolors.co/) | Choosing color schemes |
+
+---
+
 ## 👤 How the User System Works
 
 All user accounts are stored in a single `users` object in `localStorage`, keyed by username:
@@ -120,6 +131,7 @@ When a user logs in, their username is saved to `currentUser` in localStorage, a
 | 125 | 🌳 Nature Guardian |
 | 180 | 🧘 Grass Sage |
 | 250 | 👑 Legend of the Lawn |
+
 
 
 > Made with ❤️ for college students everywhere. You're doing great.
